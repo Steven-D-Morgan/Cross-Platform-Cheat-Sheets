@@ -6,10 +6,12 @@ CALCULATE(
     COUNTA('Incident Statistics'[CWUnder15Check]),FILTER('Incident Statistics','Incident Statistics'[CWUnder15Metric]= "Yes")
  )
 ```
+
 ```
 CWUnder15Calc:
 CWUnder15Calc = DIVIDE([CWUnder15],[CWUnder15TOTAL])
 ```
+
 ```
 CWUnder15TOTAL:
 CWUnder15TOTAL = 
@@ -17,9 +19,6 @@ CALCULATE(
     COUNTA('Incident Statistics'[CWUnder15Check]),FILTER('Incident Statistics','Incident Statistics'[CWUnder15Metric]= "Yes" || 'Incident Statistics'[CWUnder15Metric]= "No")
  )
 ```
-***
-
-
 
 ```
 InitialEmailMeasure1 = 
@@ -27,7 +26,6 @@ CALCULATE(
     COUNTA('Incidents (MAIN)'[Custom.1]),FILTER('Incidents (MAIN)','Incidents (MAIN)'[Custom.1]= "Yes")
     )
 ```
-
 ```
 InitialEmailMeasure2 = CALCULATE(
     COUNTA('Incidents (MAIN)'[Custom.1]),FILTER('Incidents (MAIN)','Incidents (MAIN)'[Custom.1]= "Yes" || 'Incidents (MAIN)'[Custom.1]= "No")
@@ -38,15 +36,13 @@ InitialEmailMeasure2 = CALCULATE(
 CWUnder15Calc:
 CWUnder15Calc = DIVIDE([CWUnder15],[CWUnder15TOTAL])
 ```
-***
-
-
 
 ```
 WeatherLocation -> North Carolina = 
 CALCULATE(COUNTROWS('Weather_Statistics'),FILTER('Weather_Statistics','Weather_Statistics'[State/Province]="North Carolina"))
 ```
-
+***
+***
 ***
 
 ### Couting things based on what it is classified as in any column
@@ -73,10 +69,9 @@ CALCULATE(COUNTROWS('AlarmData'),FILTER('MasterBuildingList','MasterBuildingList
 AMERICAS Alarms = 
 CALCULATE(COUNTROWS('AlarmData'),FILTER('MasterBuildingList','MasterBuildingList'[Global Region]="AMERICAS"))
 ```
-
-
-
-
+***
+***
+***
 ```
 String Duration in Hours and Minutes = 
 var vMinues=[Duration in Minutes]
@@ -91,4 +86,6 @@ return
 ```
 ```
 
+***
+***
 ***
