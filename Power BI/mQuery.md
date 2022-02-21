@@ -23,7 +23,7 @@ else "I AM BROKEN, FIX ME"
 ***
 ### Assorted Time Calculations
 ```
-=Duration.TotalMinutes([EndDate] - [BeginDate])​
+Duration.TotalMinutes([NormalTime]-[Timestamp])
 ```
 ```
 Duration.Minutes(#duration(4, 13, 5, 23))
