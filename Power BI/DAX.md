@@ -81,11 +81,37 @@ return
   vHours&" Hours & "& vRemainingMinutes& " Minutes"
 ```
 ***
-[<img src="https://i1.wp.com/radacad.com/wp-content/uploads/2019/10/2019-10-11_10h07_09.png">]
+<img src="https://i1.wp.com/radacad.com/wp-content/uploads/2019/10/2019-10-11_10h07_09.png">
+***
+***
 ***
 ```
+
+```
+***
+***
+***
 ```
 
+```
+***
+***
+***
+```
+
+```
+***
+***
+***
+```
+
+```
+***
+***
+***
+```
+
+```
 ***
 ***
 ***
