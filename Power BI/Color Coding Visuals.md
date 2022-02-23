@@ -1,10 +1,17 @@
-This column is then used in "Conditional Formatting" when using the Table Visual to color code line items based on the values below.
+This Custom Column is then used in "Conditional Formatting" when using the Table Visual to color code line items based on the values below.
 
-Conditional Formatting
-IF 'Asset' = "Asset Not Listed" THEN "1"
-IF 'Asset' DOES NOT = "Asset Not Listed" THEN "2"
-IF 'Simple Status' = "Open" THEN "3"
-IF 'Simple Status' = "On Hold" THEN "4"
-IF 'Simple Status' = "Closed" THEN "5"
-IF 'Simple Status' = "Cancelled" THEN "6"
-ELSE = 0
+Formatting
+```
+if [Simple Status] = "Open" and [Asset] = "Asset Not Listed" then "1"
+else if [Simple Status] = "Open" and [Asset] <> "Asset Not Listed" then "2"
+else if [Simple Status] = "Closed" and [Asset] = "Asset Not Listed" then "3"
+else if [Simple Status] = "Closed" and [Asset] <> "Asset Not Listed" then "4"
+else if [Simple Status] = "On Hold" and [Asset] = "Asset Not Listed" then "5"
+else if [Simple Status] = "On Hold" and [Asset] <> "Asset Not Listed" then "6"
+else if [Simple Status] = "On Hold" and [Asset] = "Asset Not Listed" then "7"
+else if [Simple Status] = "On Hold" and [Asset] <> "Asset Not Listed" then "8"
+else "0"
+```
+
+```
+```
