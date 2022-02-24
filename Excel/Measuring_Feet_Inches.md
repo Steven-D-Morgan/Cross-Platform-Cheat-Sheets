@@ -1,4 +1,4 @@
-The below equation makes determining inches & feeet super simple.
+The below equation makes determining inches & feet super simple.
 
 
 ```
