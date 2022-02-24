@@ -37,6 +37,14 @@ else if Duration.Days([Technically Completed] - [Due Date]) > 0 then "Late"
 else "TBD"
 ```
 ```
+if [PAID ON] = null then "Not Due Yet"
+else if Duration.Days(Date.From(DateTime.LocalNow()) - [DUE]) >= 0 then "On Time"
+else if Duration.Days(Date.From(DateTime.LocalNow()) - [DUE]) < 0 then "Late"
+else if Duration.Days([PAID ON] - [DUE]) <= 0 then "On Time"
+else if Duration.Days([PAID ON] - [DUE]) > 0 then "Late"
+else "TBD"
+```
+```
 if [Due Date] = null then "OnTime"
 else if [SLA_01] = "OnTime" then "OnTime"
 else if [SLA_01] = "Late" then "Late"
