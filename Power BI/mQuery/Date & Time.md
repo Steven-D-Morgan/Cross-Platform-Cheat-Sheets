@@ -17,11 +17,11 @@
 
 ### Duration of time between two Date or Date/Time Columns
  - Ways to perform this operation
-    - Directly into the editor bar.
-       - Replace "COLUMN: Date/Time" with the name of your last step.
-    ```
-    = Table.AddColumn(#"COLUMN: Date/Time", "Time In Alarm Console", each Duration.Minutes([Acknowledged]-[Timestamp]))
-    ```
+    - Directly entered into the editor bar.
+     - Replace "COLUMN: Date/Time" with the name of your last step.
+      ```
+      = Table.AddColumn(#"COLUMN: Date/Time", "Time In Alarm Console", each Duration.Minutes([Acknowledged]-[Timestamp]))
+      ```
     - NEW Custom Column
       ```
       Duration.Days([Acknowledged]-[Timestamp])
