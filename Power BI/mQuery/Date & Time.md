@@ -23,13 +23,18 @@
     = Table.AddColumn(#"COLUMN: Date/Time", "Time In Alarm Console", each Duration.Minutes([Acknowledged]-[Timestamp]))
     ```
     - NEW Custom Column
-    ```
-    Duration.Minutes([Acknowledged]-[Timestamp])
-    ```
-    ```
-
-    ```
-
+      ```
+      Duration.Days([Acknowledged]-[Timestamp])
+      ```
+      ```
+      Duration.Hours([Acknowledged]-[Timestamp])
+      ```
+      ```
+      Duration.Minutes([Acknowledged]-[Timestamp])
+      ```
+      ```
+      Duration.Seconds([Acknowledged]-[Timestamp])
+      ```
 ***
 
 
