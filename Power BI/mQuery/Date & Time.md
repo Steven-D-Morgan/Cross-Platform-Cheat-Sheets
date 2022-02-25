@@ -1,4 +1,4 @@
-### Subtract One Day from a Date or Date/Time Column
+### Subtract X Day(s)/Month(s)/Year(s) from a Date or Date/Time Column
  - Below are exaples on how to subtract Days, Months or Years
     - X **Days** from a column date.
     ```
@@ -15,7 +15,7 @@
 
 ***
 
-### Determining Duration from subtracting a Date/Time Column from a Date/Time Column
+### Duration of time between two Date or Date/Time Columns
  - Here are three different ways to perform the same mathematical operation.
     ```
     TimeInQueue = 24. * 60 * ([Active Start Date:Time]-[Request Start Date:Time])
