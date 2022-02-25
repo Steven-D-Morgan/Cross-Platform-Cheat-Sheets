@@ -1,6 +1,6 @@
 The below equation makes determining inches & feet super simple.
 
-[Download Excel Example File](https://github.com/Steven-D-Morgan/Cross-Platform-Cheat-Sheets/blob/main/Excel/xlsx/Measuring_Feet_Inches.xlsx?raw=true)
+[Download Related Excel Example File](https://github.com/Steven-D-Morgan/Cross-Platform-Cheat-Sheets/blob/main/Excel/xlsx/Measuring_Feet_Inches.xlsx?raw=true)
 ***
 ```
 =INT(F3/12) & " ft. " & MOD(F3,12) & " in."
