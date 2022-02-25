@@ -16,15 +16,15 @@
 ***
 
 ### Duration of time between two Date or Date/Time Columns
- - Here are three different ways to perform the same mathematical operation.
+ - Ways to perform this operation
     ```
-    TimeInQueue = 24. * 60 * ([Active Start Date:Time]-[Request Start Date:Time])
-    ```
-    ```
-    Difference = DATEDIFF(min(Table1[Date1]),min(table1[Date2]),MINUTE)
+    = Table.AddColumn(#"COLUMN: Date/Time", "Time In Alarm Console", each Duration.Minutes([Acknowledged]-[Timestamp]))
     ```
     ```
-    MinutesDifference = DATEDIFF(Table1[Date1],Table1[Date2],MINUTE)
+    Duration.Minutes([Acknowledged]-[Timestamp]))
+    ```
+    ```
+
     ```
 
 ***
