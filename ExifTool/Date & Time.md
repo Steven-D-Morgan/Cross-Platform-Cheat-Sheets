@@ -29,12 +29,17 @@ exiftool '-FileName<DateTimeOriginal' -d "%m-%d-%Y-c.%%e"
 
 
 ***
-- 
+- Set all Date/Time fields with a single command.
 
 ```
-
+exiftool "-AllDates=1986:11:05 12:00:00"
 ```
 
 
 
 ***
+- TITLE HERE
+  - Description here (if applicable)
+```
+ENTER CODE HERE
+```
