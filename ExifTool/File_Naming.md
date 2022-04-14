@@ -1,6 +1,6 @@
 ### FILE NAMING
-- Enter *description* here
+- Name all files within selected directory based on **DateTimeOriginal** field
 ```
-Minus1Month = DATE(YEAR(NOW(-1)), MONTH(NOW(), DAY(NOW()
+exiftool '-FileName<DateTimeOriginal' -d "%Y-%m-%d %H.%M.%S%%-c.%%e" /directory/
 ```
 ***
