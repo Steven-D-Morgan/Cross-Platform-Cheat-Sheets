@@ -6,4 +6,35 @@
 ```
 exiftool '-createdate<datetimeoriginal' -r -if '(not $createdate and $datetimeoriginal)' /path/to/picture/directory/
 ```
+
+
+
+***
+- Name the file based on **DateTimeOriginal** *EXIF** field.
+  - If two contain identical **DateTimeOriginal** it will add a number to it.
+  - *EXAMPLE:* 2014-01-01 12:00:00.jpg
+```
+exiftool '-FileName<DateTimeOriginal' -d "%Y-%m-%d %H.%M.%S%%-c.%%e"
+```
+
+
+
+***
+- Name the file based on **DateTimeOriginal** *EXIF** field and add a number to it
+  - *EXAMPLE:* 2014-01-01 12:00:00.jpg
+```
+exiftool '-FileName<DateTimeOriginal' -d "%m-%d-%Y-c.%%e"
+```
+
+
+
+***
+- 
+
+```
+
+```
+
+
+
 ***
