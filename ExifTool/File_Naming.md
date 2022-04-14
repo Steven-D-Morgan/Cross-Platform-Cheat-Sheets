@@ -1,7 +1,6 @@
 ### FILE NAMING
-    - Enter **Description** here
-    
-      ```
-      Type Command here 
-      ```
+- Enter *description* here
+```
+Minus1Month = DATE(YEAR(NOW(-1)), MONTH(NOW(), DAY(NOW()
+```
 ***
