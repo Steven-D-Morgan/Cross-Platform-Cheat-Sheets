@@ -21,6 +21,32 @@ exiftool -TagsFromFile source.jpg target.jpg
 ```
 
 
+***
+- Show progress in the log
+  - Useful if editing large directories or something like that.
+```
+-progress
+```
+
+
+
+***
+- TITLE HERE
+  - Description here (if applicable)
+```
+ENTER CODE HERE
+```
+
+
+
+***
+- TITLE HERE
+  - Description here (if applicable)
+```
+ENTER CODE HERE
+```
+
+
 
 ***
 - TITLE HERE
