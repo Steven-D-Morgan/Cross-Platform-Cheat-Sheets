@@ -6,15 +6,6 @@
 
 
 ***
-- https://exiftool.org/geotag.html
-- 
-```
-exiftool -all= picture.jpg
-```
-
-
-
-***
 - TITLE HERE
   - Description here (if applicable)
 ```
