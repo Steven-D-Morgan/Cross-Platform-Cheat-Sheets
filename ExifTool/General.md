@@ -15,3 +15,16 @@ exiftool -all= *.jpg
 -overwrite_original_in_place
 ```
 ***
+- Copy all tags from one file to another
+```
+exiftool -TagsFromFile source.jpg target.jpg
+```
+
+
+
+***
+- TITLE HERE
+  - Description here (if applicable)
+```
+ENTER CODE HERE
+```
