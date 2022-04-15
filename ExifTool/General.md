@@ -1,5 +1,9 @@
 ### FILE NAMING
 ***
+**REFERENCES**
+ - https://exiftool.org/examples.html
+
+***
 - Remove all Metadata from one picture
 ```
 exiftool -all= picture.jpg
