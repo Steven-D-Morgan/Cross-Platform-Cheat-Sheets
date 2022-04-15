@@ -3,7 +3,7 @@
 **REFERENCES**
  - https://exiftool.org/examples.html
  - https://exiftool.org/TagNames/GPS.html
-
+ - https://stackoverflow.com/questions/28795423/writing-gps-data-in-a-simple-image-file-with-no-previous-gps-data-in-it
 ***
 - Remove all Metadata from one picture
 ```
