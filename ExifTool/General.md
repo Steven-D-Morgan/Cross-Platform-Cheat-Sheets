@@ -2,6 +2,7 @@
 ***
 **REFERENCES**
  - https://exiftool.org/examples.html
+ - https://exiftool.org/TagNames/GPS.html
 
 ***
 - Remove all Metadata from one picture
