@@ -25,19 +25,9 @@
 | ----------- | ----------- |
 | "-IPTC:TimeCreated<QuickTime:CreateDate" | MP4, MOV, GIF |
 | "-IPTC:DateCreated<QuickTime:CreateDate" | MP4, MOV, GIF |
-| "-XMP:DateTimeOriginal<QuickTime:CreateDate" | N/A |
-| "-XMP-exif:DateTimeOriginal<QuickTime:CreateDate" | N/A |
-| "-XMP-xmp:CreateDate<QuickTime:CreateDate" | N/A |
-| "-XMP-xmp:ModifyDate<QuickTime:CreateDate" | N/A |
-| "-XMP-pdf:CreationDate<QuickTime:CreateDate" | N/A |
-| "-XMP-photoshop:DateCreated<QuickTime:CreateDate" | N/A |
+
 | "-CreationTime<QuickTime:CreateDate" | MP4, MOV, GIF, JPG, JPEG |
-| "-CreationDate<QuickTime:CreateDate" | N/A |
-| "-CreateDate<QuickTime:CreateDate" | N/A |
-| "-DigitalCreationDate<QuickTime:CreateDate" | N/A |
-| "-ModifyDate<QuickTime:CreateDate" | N/A |
-| "-DateTime<QuickTime:CreateDate" | N/A |
-| "-DateCreated<QuickTime:CreateDate" | N/A |
+
 
 ***
 | COMMAND | MOV | MP4 | GIF | PNG | JPEG | JPG |
@@ -47,18 +37,19 @@
 | "-EXIF:CreateDate<QuickTime:CreateDate" |  |  | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
 | "-EXIF:DateTimeOriginal<QuickTime:CreateDate" |  |  |  | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
 | "-EXIF:ModifyDate<QuickTime:CreateDate" | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |  | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
-| "-IPTC:TimeCreated<QuickTime:CreateDate" | [] | [] | [] | [x] | [x] | [x] | [x] |
-| "-IPTC:DateCreated<QuickTime:CreateDate" | [] | [] | [] | [x] | [x] | [x] | [x] |
-| "-XMP:DateTimeOriginal<QuickTime:CreateDate" | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
-| "-XMP-exif:DateTimeOriginal<QuickTime:CreateDate" | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
-| "-XMP-xmp:CreateDate<QuickTime:CreateDate" | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
-| "-XMP-xmp:ModifyDate<QuickTime:CreateDate" | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
-| "-XMP-pdf:CreationDate<QuickTime:CreateDate" | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
-| "-XMP-photoshop:DateCreated<QuickTime:CreateDate" | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
-| "-CreationTime<QuickTime:CreateDate" | [] | [] | [] | [x] | [] | [] | [] |
-| "-CreationDate<QuickTime:CreateDate" | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
-| "-CreateDate<QuickTime:CreateDate" | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
-| "-DigitalCreationDate<QuickTime:CreateDate" | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
-| "-ModifyDate<QuickTime:CreateDate" | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
-| "-DateTime<QuickTime:CreateDate" | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
-| "-DateCreated<QuickTime:CreateDate" | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
+
+| "-IPTC:TimeCreated<QuickTime:CreateDate" | | | | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
+| "-IPTC:DateCreated<QuickTime:CreateDate" | | | | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
+| "-XMP:DateTimeOriginal<QuickTime:CreateDate" | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
+| "-XMP-exif:DateTimeOriginal<QuickTime:CreateDate" | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
+| "-XMP-xmp:CreateDate<QuickTime:CreateDate" | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
+| "-XMP-xmp:ModifyDate<QuickTime:CreateDate" | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
+| "-XMP-pdf:CreationDate<QuickTime:CreateDate" | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
+| "-XMP-photoshop:DateCreated<QuickTime:CreateDate" | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
+| "-CreationTime<QuickTime:CreateDate" |  | | | <ul><li>[x] </li></ul> |  |  |  |
+| "-CreationDate<QuickTime:CreateDate" | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
+| "-CreateDate<QuickTime:CreateDate" | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
+| "-DigitalCreationDate<QuickTime:CreateDate" | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
+| "-ModifyDate<QuickTime:CreateDate" | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
+| "-DateTime<QuickTime:CreateDate" | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
+| "-DateCreated<QuickTime:CreateDate" | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
