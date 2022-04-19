@@ -23,11 +23,6 @@
 ***
 | COMMAND | DOES NOT WORK WITH |
 | ----------- | ----------- |
-| "-QuickTime:CreateDate<QuickTime:CreateDate" | JPG |
-| "-QuickTime:ModifyDate<QuickTime:CreateDate" | JPG |
-| "-EXIF:CreateDate<QuickTime:CreateDate" | MP4, MOV |
-| "-EXIF:DateTimeOriginal<QuickTime:CreateDate" | MP4, MOV, GIF |
-| "-EXIF:ModifyDate<QuickTime:CreateDate" | GIF |
 | "-IPTC:TimeCreated<QuickTime:CreateDate" | MP4, MOV, GIF |
 | "-IPTC:DateCreated<QuickTime:CreateDate" | MP4, MOV, GIF |
 | "-XMP:DateTimeOriginal<QuickTime:CreateDate" | N/A |
@@ -47,11 +42,11 @@
 ***
 | COMMAND | MOV | MP4 | GIF | PNG | JPEG | JPG |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| "-QuickTime:CreateDate<QuickTime:CreateDate" | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | [ ] |
-| "-QuickTime:ModifyDate<QuickTime:CreateDate" | [x] | [x] | [x] | [x] | [x] | [x] | [ ] |
-| "-EXIF:CreateDate<QuickTime:CreateDate" | - [ ] | - [ ] | - [x] | [x] | [x] | [x] | [x] |
-| "-EXIF:DateTimeOriginal<QuickTime:CreateDate" | [] | [] | [] | [x] | [x] | [x] | [x] |
-| "-EXIF:ModifyDate<QuickTime:CreateDate" | [x] | [x] | [] | [x] | [x] | [x] | [x] |
+| "-QuickTime:CreateDate<QuickTime:CreateDate" | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |  |
+| "-QuickTime:ModifyDate<QuickTime:CreateDate" | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |  |
+| "-EXIF:CreateDate<QuickTime:CreateDate" |  |  | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
+| "-EXIF:DateTimeOriginal<QuickTime:CreateDate" |  |  |  | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
+| "-EXIF:ModifyDate<QuickTime:CreateDate" | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |  | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
 | "-IPTC:TimeCreated<QuickTime:CreateDate" | [] | [] | [] | [x] | [x] | [x] | [x] |
 | "-IPTC:DateCreated<QuickTime:CreateDate" | [] | [] | [] | [x] | [x] | [x] | [x] |
 | "-XMP:DateTimeOriginal<QuickTime:CreateDate" | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
