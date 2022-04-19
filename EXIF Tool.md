@@ -43,3 +43,27 @@
 | "-ModifyDate<QuickTime:CreateDate" | N/A |
 | "-DateTime<QuickTime:CreateDate" | N/A |
 | "-DateCreated<QuickTime:CreateDate" | N/A |
+
+***
+| COMMAND | MOV | MP4 | GIF | PNG | JPEG | JPG |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| "-QuickTime:CreateDate<QuickTime:CreateDate" | X | X | X | X | X | X | |
+| "-QuickTime:ModifyDate<QuickTime:CreateDate" | JPG |
+| "-EXIF:CreateDate<QuickTime:CreateDate" | MP4, MOV |
+| "-EXIF:DateTimeOriginal<QuickTime:CreateDate" | MP4, MOV, GIF |
+| "-EXIF:ModifyDate<QuickTime:CreateDate" | GIF |
+| "-IPTC:TimeCreated<QuickTime:CreateDate" | MP4, MOV, GIF |
+| "-IPTC:DateCreated<QuickTime:CreateDate" | MP4, MOV, GIF |
+| "-XMP:DateTimeOriginal<QuickTime:CreateDate" | N/A |
+| "-XMP-exif:DateTimeOriginal<QuickTime:CreateDate" | N/A |
+| "-XMP-xmp:CreateDate<QuickTime:CreateDate" | N/A |
+| "-XMP-xmp:ModifyDate<QuickTime:CreateDate" | N/A |
+| "-XMP-pdf:CreationDate<QuickTime:CreateDate" | N/A |
+| "-XMP-photoshop:DateCreated<QuickTime:CreateDate" | N/A |
+| "-CreationTime<QuickTime:CreateDate" | MP4, MOV, GIF, JPG, JPEG |
+| "-CreationDate<QuickTime:CreateDate" | N/A |
+| "-CreateDate<QuickTime:CreateDate" | N/A |
+| "-DigitalCreationDate<QuickTime:CreateDate" | N/A |
+| "-ModifyDate<QuickTime:CreateDate" | N/A |
+| "-DateTime<QuickTime:CreateDate" | N/A |
+| "-DateCreated<QuickTime:CreateDate" | N/A |
