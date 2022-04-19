@@ -32,18 +32,18 @@
 "-IPTC:TimeCreated<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH MP4, MOV, GIF
 "-IPTC:DateCreated<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH MP4, MOV, GIF
 
-"-XMP:DateTimeOriginal<QuickTime:CreateDate"
-"-XMP-exif:DateTimeOriginal<QuickTime:CreateDate"
-"-XMP-xmp:CreateDate<QuickTime:CreateDate"
-"-XMP-xmp:ModifyDate<QuickTime:CreateDate"
-"-XMP-pdf:CreationDate<QuickTime:CreateDate"
-"-XMP-photoshop:DateCreated<QuickTime:CreateDate"
+"-XMP:DateTimeOriginal<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH 
+"-XMP-exif:DateTimeOriginal<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH 
+"-XMP-xmp:CreateDate<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH 
+"-XMP-xmp:ModifyDate<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH 
+"-XMP-pdf:CreationDate<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH 
+"-XMP-photoshop:DateCreated<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH 
 
 "-CreationTime<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH MP4, MOV, GIF, JPG, JPEG
-"-CreationDate<QuickTime:CreateDate"2
-"-CreateDate<QuickTime:CreateDate"
+"-CreationDate<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH 
+"-CreateDate<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH 
 "-DigitalCreationDate<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH MP4, MOV, GIF
-"-ModifyDate<QuickTime:CreateDate"
-"-DateTime<QuickTime:CreateDate"
+"-ModifyDate<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH 
+"-DateTime<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH 
 
-"-DateCreated<QuickTime:CreateDate"
+"-DateCreated<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH 
