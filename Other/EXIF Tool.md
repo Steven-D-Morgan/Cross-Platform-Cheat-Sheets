@@ -8,6 +8,15 @@
       -xmp:gpslatitude="38.897957" -xmp:gpslongitude="-77.036560" -xmp:gpsaltitude="59" -xmp:latitude="38.897957" -xmp:longitude="-77.036560" -xmp:altitude="59"
       ```
 ***
+### REMOVING ALL METADATA ###
+ - There are many reasons why you would want to do this.
+  - Posting an image online
+  - Removing all MetaData before standardizing what you want shown.
+  - Other reasons
+      ```
+      -all:all= -r -overwrite_original
+      ```
+***
 
 - QuickTime:CreateDate="2012:12:12 12:12:12"
   - YYYY:MM:DD HH:MM:SS
