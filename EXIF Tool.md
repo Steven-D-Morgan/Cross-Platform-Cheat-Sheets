@@ -9,24 +9,17 @@
       ```
 ***
 
--QuickTime:CreateDate="2012:12:12 12:12:12"
+- QuickTime:CreateDate="2012:12:12 12:12:12"
   - YYYY:MM:DD HH:MM:SS
--EXIF:ModifyDate="2012:12:12 12:12:12"
+- EXIF:ModifyDate="2012:12:12 12:12:12"
   - YYYY:MM:DD HH:MM:SS
--IPTC:TimeCreated="12:12:12-05:00"
+- IPTC:TimeCreated="12:12:12-05:00"
   - HH:MM:SS-TZ:TZ
--IPTC:DateCreated="12:12:12"
+- IPTC:DateCreated="12:12:12"
   - YYYY:MM:DD
--DateCreated="SEE BELOW"
+- DateCreated="SEE BELOW"
   - JPEG, JPG, GIF = YYYY:MM:DD HH:MM:SS
   - PNG = YYYY:MM:DD
-***
-| COMMAND | DOES NOT WORK WITH |
-| ----------- | ----------- |
-| "-IPTC:TimeCreated<QuickTime:CreateDate" | MP4, MOV, GIF |
-| "-IPTC:DateCreated<QuickTime:CreateDate" | MP4, MOV, GIF |
-
-| "-CreationTime<QuickTime:CreateDate" | MP4, MOV, GIF, JPG, JPEG |
 
 
 ***
@@ -37,7 +30,6 @@
 | "-EXIF:CreateDate<QuickTime:CreateDate" |  |  | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
 | "-EXIF:DateTimeOriginal<QuickTime:CreateDate" |  |  |  | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
 | "-EXIF:ModifyDate<QuickTime:CreateDate" | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |  | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
-
 | "-IPTC:TimeCreated<QuickTime:CreateDate" | | | | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
 | "-IPTC:DateCreated<QuickTime:CreateDate" | | | | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
 | "-XMP:DateTimeOriginal<QuickTime:CreateDate" | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> |
