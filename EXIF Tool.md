@@ -48,8 +48,8 @@
 | COMMAND | MOV | MP4 | GIF | PNG | JPEG | JPG |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | "-QuickTime:CreateDate<QuickTime:CreateDate" | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | [ ] |
-| "-QuickTime:ModifyDate<QuickTime:CreateDate" | [x] | [x] | [x] | [x] | [x] | [x] | [] |
-| "-EXIF:CreateDate<QuickTime:CreateDate" | [] | [] | [x] | [x] | [x] | [x] | [x] |
+| "-QuickTime:ModifyDate<QuickTime:CreateDate" | [x] | [x] | [x] | [x] | [x] | [x] | [ ] |
+| "-EXIF:CreateDate<QuickTime:CreateDate" | [ ] | [ ] | [x] | [x] | [x] | [x] | [x] |
 | "-EXIF:DateTimeOriginal<QuickTime:CreateDate" | [] | [] | [] | [x] | [x] | [x] | [x] |
 | "-EXIF:ModifyDate<QuickTime:CreateDate" | [x] | [x] | [] | [x] | [x] | [x] | [x] |
 | "-IPTC:TimeCreated<QuickTime:CreateDate" | [] | [] | [] | [x] | [x] | [x] | [x] |
