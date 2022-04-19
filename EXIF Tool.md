@@ -21,29 +21,25 @@
   - JPEG, JPG, GIF = YYYY:MM:DD HH:MM:SS
   - PNG = YYYY:MM:DD
 ***
-
-"-QuickTime:CreateDate<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH JPG
-"-QuickTime:ModifyDate<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH JPG
-
-"-EXIF:CreateDate<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH MP4, MOV
-"-EXIF:DateTimeOriginal<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH MP4, MOV, GIF
-"-EXIF:ModifyDate<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH GIF
-
-"-IPTC:TimeCreated<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH MP4, MOV, GIF
-"-IPTC:DateCreated<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH MP4, MOV, GIF
-
-"-XMP:DateTimeOriginal<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH 
-"-XMP-exif:DateTimeOriginal<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH 
-"-XMP-xmp:CreateDate<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH 
-"-XMP-xmp:ModifyDate<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH 
-"-XMP-pdf:CreationDate<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH 
-"-XMP-photoshop:DateCreated<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH 
-
-"-CreationTime<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH MP4, MOV, GIF, JPG, JPEG
-"-CreationDate<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH 
-"-CreateDate<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH 
-"-DigitalCreationDate<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH MP4, MOV, GIF
-"-ModifyDate<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH 
-"-DateTime<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH 
-
-"-DateCreated<QuickTime:CreateDate"   ------------------------> DOES NOT WORK WITH 
+| COMMAND | DOES NOT WORK WITH | FILE TYPE |
+| ----------- | ----------- | ----------- |
+| "-QuickTime:CreateDate<QuickTime:CreateDate" | DOES NOT WORK WITH | JPG |
+| "-QuickTime:ModifyDate<QuickTime:CreateDate" | DOES NOT WORK WITH | JPG |
+| "-EXIF:CreateDate<QuickTime:CreateDate" | DOES NOT WORK WITH | MP4, MOV |
+| "-EXIF:DateTimeOriginal<QuickTime:CreateDate" | DOES NOT WORK WITH | MP4, MOV, GIF |
+| "-EXIF:ModifyDate<QuickTime:CreateDate" | DOES NOT WORK WITH | GIF |
+| "-IPTC:TimeCreated<QuickTime:CreateDate" | DOES NOT WORK WITH | MP4, MOV, GIF |
+| "-IPTC:DateCreated<QuickTime:CreateDate" | DOES NOT WORK WITH | MP4, MOV, GIF |
+| "-XMP:DateTimeOriginal<QuickTime:CreateDate" | DOES NOT WORK WITH | N/A |
+| "-XMP-exif:DateTimeOriginal<QuickTime:CreateDate" | DOES NOT WORK WITH | N/A |
+| "-XMP-xmp:CreateDate<QuickTime:CreateDate" | DOES NOT WORK WITH | N/A |
+| "-XMP-xmp:ModifyDate<QuickTime:CreateDate" | DOES NOT WORK WITH | N/A |
+| "-XMP-pdf:CreationDate<QuickTime:CreateDate" | DOES NOT WORK WITH | N/A |
+| "-XMP-photoshop:DateCreated<QuickTime:CreateDate" | DOES NOT WORK WITH | N/A |
+| "-CreationTime<QuickTime:CreateDate" | DOES NOT WORK WITH | MP4, MOV, GIF, JPG, JPEG |
+| "-CreationDate<QuickTime:CreateDate" | DOES NOT WORK WITH |N/A |
+| "-CreateDate<QuickTime:CreateDate" | DOES NOT WORK WITH |N/A |
+| "-DigitalCreationDate<QuickTime:CreateDate" | DOES NOT WORK WITH |N/A |
+| "-ModifyDate<QuickTime:CreateDate" | DOES NOT WORK WITH | N/A |
+| "-DateTime<QuickTime:CreateDate" | DOES NOT WORK WITH | N/A |
+| "-DateCreated<QuickTime:CreateDate" | DOES NOT WORK WITH | N/A |
