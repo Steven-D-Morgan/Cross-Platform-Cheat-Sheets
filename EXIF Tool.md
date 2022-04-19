@@ -22,7 +22,7 @@
   - PNG = YYYY:MM:DD
 ***
 | COMMAND | DOES NOT WORK WITH |
-| ----------- | ----------- | ----------- |
+| ----------- | ----------- |
 | "-QuickTime:CreateDate<QuickTime:CreateDate" | JPG |
 | "-QuickTime:ModifyDate<QuickTime:CreateDate" | JPG |
 | "-EXIF:CreateDate<QuickTime:CreateDate" | MP4, MOV |
