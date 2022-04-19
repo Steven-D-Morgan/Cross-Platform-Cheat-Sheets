@@ -13,6 +13,7 @@
   - Posting an image online
   - Removing all MetaData before standardizing what you want shown.
   - Other reasons
+ - *The -overwrite_original command is not needed if using the GUI and have the make a copy of file option disabled)*
       ```
       -all:all= -r -overwrite_original
       ```
