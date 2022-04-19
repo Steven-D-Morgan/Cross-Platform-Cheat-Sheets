@@ -5,7 +5,7 @@
     - Altitude: 59
  - To embed these coordinates into the MetaData of a media file...
       ```
-      -xmp:gpslatitude="38.897957" -xmp:gpslongitude="-77.036560" -xmp:gpsaltitude="59" -xmp:latitude="38.897957" -xmp:longitude="-77.036560" -xmp:altitude="59"
+      -xmp:gpslatitude="38.897957" -xmp:gpslongitude="-77.036560" -xmp:gpsaltitude="59" -xmp:latitude="38.897957" -xmp:longitude="-77.036560"
       ```
 ***
 ### REMOVING ALL METADATA ###
@@ -15,7 +15,7 @@
   - Other reasons
  - *The -overwrite_original command is not needed if using the GUI and have the make a copy of file option disabled)*
       ```
-      -all:all= -r -overwrite_original
+      -all:all= -r
       ```
 ***
 
