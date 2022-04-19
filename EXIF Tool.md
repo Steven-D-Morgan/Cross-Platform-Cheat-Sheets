@@ -21,25 +21,25 @@
   - JPEG, JPG, GIF = YYYY:MM:DD HH:MM:SS
   - PNG = YYYY:MM:DD
 ***
-| COMMAND | DOES NOT WORK WITH | FILE TYPE |
+| COMMAND | DOES NOT WORK WITH |
 | ----------- | ----------- | ----------- |
-| "-QuickTime:CreateDate<QuickTime:CreateDate" | DOES NOT WORK WITH | JPG |
-| "-QuickTime:ModifyDate<QuickTime:CreateDate" | DOES NOT WORK WITH | JPG |
-| "-EXIF:CreateDate<QuickTime:CreateDate" | DOES NOT WORK WITH | MP4, MOV |
-| "-EXIF:DateTimeOriginal<QuickTime:CreateDate" | DOES NOT WORK WITH | MP4, MOV, GIF |
-| "-EXIF:ModifyDate<QuickTime:CreateDate" | DOES NOT WORK WITH | GIF |
-| "-IPTC:TimeCreated<QuickTime:CreateDate" | DOES NOT WORK WITH | MP4, MOV, GIF |
-| "-IPTC:DateCreated<QuickTime:CreateDate" | DOES NOT WORK WITH | MP4, MOV, GIF |
-| "-XMP:DateTimeOriginal<QuickTime:CreateDate" | DOES NOT WORK WITH | N/A |
-| "-XMP-exif:DateTimeOriginal<QuickTime:CreateDate" | DOES NOT WORK WITH | N/A |
-| "-XMP-xmp:CreateDate<QuickTime:CreateDate" | DOES NOT WORK WITH | N/A |
-| "-XMP-xmp:ModifyDate<QuickTime:CreateDate" | DOES NOT WORK WITH | N/A |
-| "-XMP-pdf:CreationDate<QuickTime:CreateDate" | DOES NOT WORK WITH | N/A |
-| "-XMP-photoshop:DateCreated<QuickTime:CreateDate" | DOES NOT WORK WITH | N/A |
-| "-CreationTime<QuickTime:CreateDate" | DOES NOT WORK WITH | MP4, MOV, GIF, JPG, JPEG |
-| "-CreationDate<QuickTime:CreateDate" | DOES NOT WORK WITH |N/A |
-| "-CreateDate<QuickTime:CreateDate" | DOES NOT WORK WITH |N/A |
-| "-DigitalCreationDate<QuickTime:CreateDate" | DOES NOT WORK WITH |N/A |
-| "-ModifyDate<QuickTime:CreateDate" | DOES NOT WORK WITH | N/A |
-| "-DateTime<QuickTime:CreateDate" | DOES NOT WORK WITH | N/A |
-| "-DateCreated<QuickTime:CreateDate" | DOES NOT WORK WITH | N/A |
+| "-QuickTime:CreateDate<QuickTime:CreateDate" | JPG |
+| "-QuickTime:ModifyDate<QuickTime:CreateDate" | JPG |
+| "-EXIF:CreateDate<QuickTime:CreateDate" | MP4, MOV |
+| "-EXIF:DateTimeOriginal<QuickTime:CreateDate" | MP4, MOV, GIF |
+| "-EXIF:ModifyDate<QuickTime:CreateDate" | GIF |
+| "-IPTC:TimeCreated<QuickTime:CreateDate" | MP4, MOV, GIF |
+| "-IPTC:DateCreated<QuickTime:CreateDate" | MP4, MOV, GIF |
+| "-XMP:DateTimeOriginal<QuickTime:CreateDate" | N/A |
+| "-XMP-exif:DateTimeOriginal<QuickTime:CreateDate" | N/A |
+| "-XMP-xmp:CreateDate<QuickTime:CreateDate" | N/A |
+| "-XMP-xmp:ModifyDate<QuickTime:CreateDate" | N/A |
+| "-XMP-pdf:CreationDate<QuickTime:CreateDate" | N/A |
+| "-XMP-photoshop:DateCreated<QuickTime:CreateDate" | N/A |
+| "-CreationTime<QuickTime:CreateDate" | MP4, MOV, GIF, JPG, JPEG |
+| "-CreationDate<QuickTime:CreateDate" | N/A |
+| "-CreateDate<QuickTime:CreateDate" | N/A |
+| "-DigitalCreationDate<QuickTime:CreateDate" | N/A |
+| "-ModifyDate<QuickTime:CreateDate" | N/A |
+| "-DateTime<QuickTime:CreateDate" | N/A |
+| "-DateCreated<QuickTime:CreateDate" | N/A |
