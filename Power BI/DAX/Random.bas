@@ -1,20 +1,20 @@
-### C&W Notififed In Under 15 Minutes?
+### Notififed In Under 15 Minutes?
 ```
-C&W_Under_15m?:
-CWUnder15 = 
+Under_15m?:
+Under15 = 
 CALCULATE(
     COUNTA('Incident Statistics'[CWUnder15Check]),FILTER('Incident Statistics','Incident Statistics'[CWUnder15Metric]= "Yes")
  )
 ```
 
 ```
-CWUnder15Calc:
-CWUnder15Calc = DIVIDE([CWUnder15],[CWUnder15TOTAL])
+Under15Calc:
+Under15Calc = DIVIDE([Under15],[Under15TOTAL])
 ```
 
 ```
-CWUnder15TOTAL:
-CWUnder15TOTAL = 
+Under15TOTAL:
+Under15TOTAL = 
 CALCULATE(
     COUNTA('Incident Statistics'[CWUnder15Check]),FILTER('Incident Statistics','Incident Statistics'[CWUnder15Metric]= "Yes" || 'Incident Statistics'[CWUnder15Metric]= "No")
  )
@@ -33,8 +33,8 @@ InitialEmailMeasure2 = CALCULATE(
 ```
 
 ```
-CWUnder15Calc:
-CWUnder15Calc = DIVIDE([CWUnder15],[CWUnder15TOTAL])
+Under15Calc:
+Under15Calc = DIVIDE([Under15],[Under15TOTAL])
 ```
 
 ```
