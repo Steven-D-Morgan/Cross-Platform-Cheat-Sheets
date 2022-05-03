@@ -36,3 +36,12 @@
     - ```
       Alternative Code Here
       ```
+      
+
+
+___
+___
+___
+      
+[Microsoft Docs: Canvas Apps - Control Drop Down](https://docs.microsoft.com/en-us/power-apps/maker/canvas-apps/controls/control-drop-down "Control Drop Down")
+      
