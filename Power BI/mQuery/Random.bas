@@ -70,11 +70,12 @@ else null
 ***
 ### Add column contents to a static URL
 ```
-                          = Table.AddColumn(Abeldex_Contact_Table, "Some Website", each if [CID] = null then "https://www.somewebsite.com/#!/home/search/advancedSearch" 
+= Table.AddColumn(Abeldex_Contact_Table, "Some Website", each if [CID] = null then "https://www.somewebsite.com/#!/home/search/advancedSearch" 
 else if [CID] = "N/A" then "https://www.somewebsite.com/#!/home/search/advancedSearch" 
 else if [CID] = "TBD" then "https://www.somewebsite.com/#!/home/search/advancedSearch"
 else "https://www.somewebsite.com/EmployeePortal/Search?id=" & [CID])
 ```
+
 ```
 = Table.AddColumn(#"COLUMN: Link", "Email Me!", each if [EMAIL] = "N/A" then "Unavailable"
 else if [EMAIL] = null then "Unavailable"
