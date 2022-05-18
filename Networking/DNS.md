@@ -20,7 +20,9 @@ dns-family.adguard.com
 | [Quad 9](https://www.quad9.net/service/service-addresses-and-features) | Unsecured: Standard DNS (Non-Filtered) | 9.9.9.10 <br><br> 149.112.112.10 | 2620:fe::10 <br><br> 2620:fe::fe:10 | dns10.quad9.net |  |
 
 ***
-# pfSense: DNS Resolver Additional Config
+## pfSense
+[Stop DNS Leakage in pfSense](http://blog.zencoffee.org/2018/04/stopping-dns-leakage-with-pfsense/)
+# DNS Resolver Additional Config
 ```
 server:
 forward-zone:
