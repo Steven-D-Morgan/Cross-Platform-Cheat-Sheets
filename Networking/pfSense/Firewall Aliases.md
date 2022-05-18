@@ -20,3 +20,22 @@
 - 9000 : VNC
 - 3389 : remote desktop
 - 49152:65535 : Ephemeral ports
+***
+**ports_LANtoWAN**
+- 21 : FTP
+- 22 : SSH
+- 80 : HTTP
+- 443 : HTTPS
+- 587 : SMTPS
+- 993 : IMAPS
+- 5222 : XMPP
+- 8080 : HTTP Alt
+- 465 : SMTPS
+- 119 : NNTP
+- 143 : IMAP
+- 6667 : IRC
+- 6697 : IRCS
+- 8443 : CalDAV
+- 8843 : CardDAV
+- 49152:65535 : ephemeral ports
+***
