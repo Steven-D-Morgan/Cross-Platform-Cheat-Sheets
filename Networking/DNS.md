@@ -18,3 +18,14 @@ dns-family.adguard.com
 | [Quad 9](https://www.quad9.net/service/service-addresses-and-features) | Secured: Malware Blocking & DNSSEC Validation | 9.9.9.9 <br><br> 149.112.112.112 | 2620:fe::fe <br><br> 2620:fe::9 | dns.quad9.net |  |
 | [Quad 9](https://www.quad9.net/service/service-addresses-and-features) | Secured: Malware Blocking & DNSSEC Validation + [ECS Enabled](https://www.quad9.net/support/faq#edns) | 9.9.9.11 <br><br> 149.112.112.11 | 2620:fe::11 <br><br> 2620:fe::fe:11| dns11.quad9.net |  |
 | [Quad 9](https://www.quad9.net/service/service-addresses-and-features) | Unsecured: Standard DNS (Non-Filtered) | 9.9.9.10 <br><br> 149.112.112.10 | 2620:fe::10 <br><br> 2620:fe::fe:10 | dns10.quad9.net |  |
+
+***
+# pfSense: DNS Resolver Additional Config
+```
+server:
+forward-zone:
+name: "."
+forward-ssl-upstream: yes
+forward-addr: 1.1.1.1@853
+forward-addr: 1.0.0.1@853
+```
