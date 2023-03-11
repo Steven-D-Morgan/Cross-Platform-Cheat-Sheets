@@ -9,10 +9,7 @@
       ```
 ***
 ### RENAME ENTIRE DIRECTORY OF FILE NAMES ###
-      ```
       "-FileName<DateTimeOriginal" -d (%m-%d-%Y)%%-c.%%e .
-      ```
-
 ***
 ### REMOVING ALL METADATA ###
  - There are many reasons why you would want to do this.
