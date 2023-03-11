@@ -8,6 +8,12 @@
       -xmp:gpslatitude="38.897957" -xmp:gpslongitude="-77.036560" -xmp:gpsaltitude="59" -xmp:latitude="38.897957" -xmp:longitude="-77.036560"
       ```
 ***
+### RENAME ENTIRE DIRECTORY OF FILE NAMES ###
+      ```
+      "-FileName<DateTimeOriginal" -d (%m-%d-%Y)%%-c.%%e .
+      ```
+
+***
 ### REMOVING ALL METADATA ###
  - There are many reasons why you would want to do this.
   - Posting an image online
