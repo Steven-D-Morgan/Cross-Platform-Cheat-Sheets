@@ -13,3 +13,19 @@ Return
             ,LEFT(GoalsActual[building]) = "V" && SecondMgrTitle = "RMM", SecondMgrName
             ,COALESCE(LOOKUPVALUE(SiteList[REGIONAL LEADER], SiteList[Site], GoalsActual[building]),"Central Team")
         )
+
+
+
+
+SiteDAX = 
+    if(Recordables[Site] = BLANK()
+        ,MID(Recordables[Work Location], SEARCH("(",Recordables[Work Location])+1,4)
+        ,Recordables[Site]
+        )
+
+
+
+
+
+KeyConnector_old = 
+    Incidents[Employee Number] & Incidents[Incident Date] & Incidents[Incident Time] & Incidents[Reported Date] & Incidents[Reported Time]
