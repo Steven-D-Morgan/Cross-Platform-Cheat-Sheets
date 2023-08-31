@@ -29,3 +29,6 @@ Source = List.Dates(StartDate, Number.From(EndDate - StartDate)+1, #duration(1,0
     #"Inserted Start of Month" = Table.AddColumn(#"Inserted Quarter", "Start of Month", each Date.StartOfMonth([Date]), type date)
 in
     #"Inserted Start of Month"
+
+
+ CALENDAR (DATE (2015, 1, 1), DATE (2021, 12, 31))
