@@ -1,6 +1,6 @@
 # PowerApps - Patching
 ___
-
+```
 Patch(
     GSC_Incidents,
     varRecord,
@@ -13,3 +13,4 @@ Patch(
     }
 );
 Navigate(Home);
+```
