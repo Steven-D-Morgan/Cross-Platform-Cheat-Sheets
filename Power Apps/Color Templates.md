@@ -9,8 +9,8 @@ ColorFade(Self.Fill, -75%)
 
 //////////////////////////////////////////////////////////////////////////////
 
-If(EA_ApprovalStatus.Text = "Approved", RGBA(54, 176, 75, 1),
-   EA_ApprovalStatus.Text = "Rejected", RGBA(255, 0, 0, 1), 
+If(Self.Text = "Yes", RGBA(54, 176, 75, 1),
+   Self.Text = "No", RGBA(255, 0, 0, 1), 
    RGBA(0, 0, 0, 1))
 
 //////////////////////////////////////////////////////////////////////////////
