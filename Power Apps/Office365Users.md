@@ -1,6 +1,6 @@
 # PowerApps - Office365 Users
 ___
-
+Office365Users.SearchUser({searchTerm:cb_LOTO_Auditor.SearchText,top:5})
 Office365Users.SearchUser({searchTerm:ComboBox1.SearchText,top:10})
 
 Distinct(Filter('SP List',choiceColumn.Value="desiredChoice"),'personColumn'.DisplayName).Result
