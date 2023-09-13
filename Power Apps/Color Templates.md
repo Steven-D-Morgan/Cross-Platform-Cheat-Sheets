@@ -1,8 +1,7 @@
 # PowerApps: Color Templates
 ___
 ColorFade(RGBA(73, 130, 5, 1), -30%)
-
-
+ColorFade(varCushmanRed, 80%)
 --------------------------------------------------------
 If(ThisItem.Price > 5, Color.Red, Color.Green)
 ColorFade(Self.Fill, -75%)
