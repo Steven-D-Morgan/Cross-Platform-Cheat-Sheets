@@ -62,3 +62,7 @@ If(
     Color.Aqua,
     Color.Black
 )
+
+//////////////////////////////////////////////////////////////////////////////
+
+If(ThisItem.IsSelected, RGBA(255,255,0,0.4), Color.White)
