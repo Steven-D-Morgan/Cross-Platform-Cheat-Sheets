@@ -35,6 +35,9 @@
       ```
       Duration.Seconds([Acknowledged]-[Timestamp])
       ```
+      ```
+      Date.From(DateTime.LocalNow()) - [DateColumn]
+      ```
 ***
 
 
