@@ -1,0 +1,1 @@
+Text.Combine({"AmazonRoboticsFloorHazard_", Text.PadStart(Text.From([ID], "en-US"), 4, "0")})
