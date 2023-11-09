@@ -1,0 +1,7 @@
+Color_CwalkPerf = if (([CwalkCountToGoal]  / [Goals]) = 1, [Color_Green], [Color_Red]) 
+
+Color_CwalkPerf_TM = if (([TM_Performance]) >= 1, [Color_Green], [Color_Red]) 
+
+Color_Green = "#9ccc65"
+
+Color_Red = "#ff6c70"
