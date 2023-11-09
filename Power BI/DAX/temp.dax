@@ -1,0 +1,13 @@
+RecordableIncidents_2023 = CALCULATE(
+    COUNTROWS(
+        FILTER(
+            Incidents, Incidents[Recordable] = "Yes")
+            ),
+            mDateTable_TRIR[Year] = 2023
+            )
+
+
+TRIR_2023_v2 = CALCULATE(
+    ([RecordableIncidents_2023]) * 200000)
+    /
+    SUM(FILTER(TRIR_Hours,TRIR_Hours[mDateTable.Year] = "2023")TRIR[HoursWorked])

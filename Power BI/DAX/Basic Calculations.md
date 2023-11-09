@@ -11,3 +11,5 @@
     ```
     Incidents_NearMissCount = COUNTROWS(FILTER(Incidents, Incidents[Type] = "Near Miss"))
     ```
+
+
