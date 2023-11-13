@@ -6,3 +6,5 @@ IF(
     CALCULATE('9 - Attrition'[activehcavg], FILTER('9 - Calendar', '9 - Calendar'[Date] < SpecificDate)),
     CALCULATE('9 - Attrition'[activehcavgcount_dly], FILTER('9 - Calendar', '9 - Calendar'[Date] >= SpecificDate))
 )
+
+TermsNew = countx('9 - cr71c_hr_termskpi', '9 - cr71c_hr_termskpi'[pk_key])
