@@ -1,0 +1,8 @@
+activehcavgcount_mod = 
+VAR SpecificDate = DATE(2023, 1, 1)
+RETURN
+IF(
+    MIN('9 - Calendar'[Date]) < SpecificDate,
+    CALCULATE('9 - Attrition'[activehcavg], FILTER('9 - Calendar', '9 - Calendar'[Date] < SpecificDate)),
+    CALCULATE('9 - Attrition'[activehcavgcount_dly], FILTER('9 - Calendar', '9 - Calendar'[Date] >= SpecificDate))
+)
