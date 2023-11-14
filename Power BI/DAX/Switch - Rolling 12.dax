@@ -1,0 +1,5 @@
+Rolling 12 Months Sales = CALCULATE(
+    SUM(Sales[Sales Amount]),
+    DATESBETWEEN('Calendar'[Date],
+    NEXTDAY(SAMEPERIODLASTYEAR('Calendar'[Date])), 
+    'Calendar'[Date]))

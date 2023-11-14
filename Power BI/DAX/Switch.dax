@@ -1,0 +1,26 @@
+https://learn.microsoft.com/en-us/dax/switch-function-dax
+
+SWITCH(
+<expression>,
+<value 1>,<result 1>,
+<value 2>,<result 2>,
+...
+,<else>
+)
+
+
+Back Color = IF(
+    SELECTEDVALUE(DimCustomer[EnglishEducation])="Bachelors",
+    "Green",
+    "White")
+
+
+Back Color = 
+SWITCH(
+    SELECTEDVALUE(DimCustomer[EnglishEducation]),
+    "Bachelors","Green",
+    "High School","Red",
+    "Partial High School","Tan",
+    "Graduate Degree","Yellow",
+    "White"
+)
