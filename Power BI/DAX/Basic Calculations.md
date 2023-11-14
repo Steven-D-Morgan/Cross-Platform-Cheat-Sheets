@@ -12,4 +12,11 @@
     Incidents_NearMissCount = COUNTROWS(FILTER(Incidents, Incidents[Type] = "Near Miss"))
     ```
 
-
+TRIR_2022A = 
+DIVIDE(
+    CALCULATE(
+        SUM(Incidents_TRIR[Count]),
+        Incidents_TRIR[Year] = 2022
+    ) * 200000,
+    SUM(TRIR_Hours[HoursWorked])
+)
