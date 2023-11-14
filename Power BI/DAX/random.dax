@@ -55,3 +55,23 @@ VAR FirstDateInPeriod = MINX ( Period, 'Date'[Date] )
 VAR LastDateWithSales = MAX ( Sales[Order Date] )
 RETURN
     IF ( FirstDateInPeriod <= LastDateWithSales, Result )
+
+
+TRIR_R12M = 
+VAR NumOfMonths = 12
+VAR LastCurrentDate =
+    MAX ( Incidents[Incident Date] )
+VAR Period =
+    DATESINPERIOD ( Incidents[Incident Date], LastCurrentDate, - NumOfMonths, MONTH )
+VAR Result =
+    CALCULATE (
+        AVERAGEX (
+            VALUES ( mDateTable[Year-Month] ),
+            Incidents[TotalIncidents]
+        ),
+        Period
+    )
+VAR FirstDateInPeriod = MINX ( Period, Incidents[Incident Date] )
+VAR LastDateWithSales = MAX ( Incidents[Incident Date] )
+RETURN
+    IF ( FirstDateInPeriod <= LastDateWithSales, Result )
