@@ -20,3 +20,18 @@ DIVIDE(
     ) * 200000,
     SUM(TRIR_Hours[HoursWorked])
 )
+
+
+Rolling 12 Months Recordables Count = 
+CALCULATE(
+    SUM('incident'[recordables_count]),
+    FILTER(
+        ALL('mdatetable'[Date]),
+        'mdatetable'[Date] >= MAX('mdatetable'[Date]) - 365
+&& 'mdatetable'[Date] <= MAX('mdatetable'[Date])
+    )
+)
+
+
+
+Rolling 12 Months TRIR_Hours = CALCULATE(     SUM('TRIR_Hours'[HOURS_WORKED]),     FILTER(         ALL('mdatetable'[Date]),         'mdatetable'[Date] >= MAX('mdatetable'[Date]) - 365         && 'mdatetable'[Date] <= MAX('mdatetable'[Date])     ) )
