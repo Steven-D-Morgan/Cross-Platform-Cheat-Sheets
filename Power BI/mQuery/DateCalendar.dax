@@ -1,28 +1,22 @@
 let
-    // Set the start and end date for the date table
-    StartDate = Date.StartOfMonth(List.Min(TRIR_Hours[DateWorked])),
-    EndDate = Date.EndOfMonth(List.Max(TRIR_Hours[DateWorked])),
-    // Create a list of dates from the start to end date
-    DateList = List.Dates(StartDate, Duration.Days(EndDate - StartDate) + 1, #duration(1,0,0,0)),
-
-    // Convert the list to a table and add columns for year, month, day, etc.
-    DateTable = Table.FromList(DateList, Splitter.SplitByNothing(), {"DateTable"}),
-    #"Changed Type" = Table.TransformColumnTypes(DateTable,{{"DateTable", type date}}),
-    #"Inserted Year" = Table.AddColumn(#"Changed Type", "Year", each Date.Year([DateTable])),
-    #"Inserted Month" = Table.AddColumn(#"Inserted Year", "Month", each Date.Month([DateTable]), Int32.Type),
-    #"Inserted Day" = Table.AddColumn(#"Inserted Month", "Day", each Date.Day([DateTable]), Int32.Type),
-    #"Inserted Weekday" = Table.AddColumn(#"Inserted Day", "Weekday", each Date.DayOfWeek([DateTable]), Int32.Type),
-    #"Inserted MonthName" = Table.AddColumn(#"Inserted Weekday", "MonthName", each Date.ToText([DateTable], "MMMM"), type text),
-    #"Inserted MonthNameShort" = Table.AddColumn(#"Inserted MonthName", "MonthNameShort", each Date.ToText([DateTable], "MMM"), type text),
-    #"Inserted QuarterNo" = Table.AddColumn(#"Inserted MonthNameShort", "QuarterNo", each Date.QuarterOfYear([DateTable]), Int32.Type),
-    #"Inserted YearQuarter" = Table.AddColumn(#"Inserted QuarterNo", "YearQuarter", each Text.Combine({Text.From([Year]), " Q", Text.From([QuarterNo])}), type text),
-    #"Inserted Year-Month" = Table.AddColumn(#"Inserted YearQuarter", "Year-Month", each Text.Combine({Text.From([Year]), "-", Text.PadStart(Text.From([Month]), 2, "0")}), type text),
-    #"Inserted YearMonthDay" = Table.AddColumn(#"Inserted Year-Month", "YearMonthDay", each Text.Combine({Text.From([Year]), Text.PadStart(Text.From([Month]), 2, "0"), Text.PadStart(Text.From([Day]), 2, "0")}), type text),
-    #"COLUMN: Quarter" = Table.AddColumn(#"Inserted YearMonthDay", "Quarter", each Text.Combine({"Q", Text.From([QuarterNo], "en-IN")}), type text),
-    #"COLUMN: Date" = Table.DuplicateColumn(#"COLUMN: Quarter", "DateTable", "Date"),
-    #"COLUMN: StartOfMonth" = Table.AddColumn(#"COLUMN: Date", "StartOfMonth", each Date.StartOfMonth([DateTable])),
-    #"COLUMN: DateToday" = Table.AddColumn(#"COLUMN: StartOfMonth", "DateToday", each DateTime.LocalNow()),
-    #"Changed Type1" = Table.TransformColumnTypes(#"COLUMN: DateToday",{{"StartOfMonth", type date}, {"DateTable", type date}, {"Date", type datetime}, {"DateToday", type date}, {"Year", Int64.Type}}),
-    #"COLUMN: IsInCurrentYear" = Table.AddColumn(#"Changed Type1", "IsInCurrentYear", each Date.IsInCurrentYear([Date]))
+    StartDate = #date(2020, 1, 1),
+    EndDate = DateTimeZone.LocalNow(),
+    #"Extracted Date" = Date.From(EndDate),
+    DateList = List.Dates(StartDate, Duration.Days(#"Extracted Date" - StartDate) + 1, #duration(1,0,0,0)),
+    #"LIST: Date" = Table.FromList(DateList, Splitter.SplitByNothing(), {"Date"}),
+    #"COLUMN: DateInteger" = Table.DuplicateColumn(#"LIST: Date", "Date", "DateInteger"),
+    #"COLUMN: Year" = Table.AddColumn(#"COLUMN: DateInteger", "Year", each Date.Year([Date])),
+    #"COLUMN: Month" = Table.AddColumn(#"COLUMN: Year", "Month", each Date.Month([Date]), Int32.Type),
+    #"COLUMN: Day" = Table.AddColumn(#"COLUMN: Month", "Day", each Date.Day([Date]), Int32.Type),
+    #"COLUMN: Weekday" = Table.AddColumn(#"COLUMN: Day", "Weekday", each Date.DayOfWeek([Date])),
+    #"COLUMN: MonthName" = Table.AddColumn(#"COLUMN: Weekday", "MonthName", each Date.ToText([Date], "MMMM"), type text),
+    #"COLUMN: MonthNameShort" = Table.AddColumn(#"COLUMN: MonthName", "MonthNameShort", each Date.ToText([Date], "MMM"), type text),
+    #"COLUMN: QuarterNumber" = Table.AddColumn(#"COLUMN: MonthNameShort", "QuarterNumber", each Date.QuarterOfYear([Date])),
+    #"COLUMN: Quarter" = Table.AddColumn(#"COLUMN: QuarterNumber", "Quarter", each Text.Combine({"Q", Text.From([QuarterNumber], "en-IN")}), type text),
+    #"COLUMN YYYY QQ" = Table.AddColumn(#"COLUMN: Quarter", "YYYY QQ", each Text.Combine({Text.From([Year]), " Q", Text.From([QuarterNumber])})),
+    #"COLUMN: YYYY-MM" = Table.AddColumn(#"COLUMN YYYY QQ", "YYYY-MM", each Text.Combine({Text.From([Year]), "-", Text.PadStart(Text.From([Month]), 2, "0")}), type text),
+    #"COLUMN: YYYYMMDD" = Table.AddColumn(#"COLUMN: YYYY-MM", "YYYYMMDD", each Text.Combine({Text.From([Year]), Text.PadStart(Text.From([Month]), 2, "0"), Text.PadStart(Text.From([Day]), 2, "0")}), type text),
+    #"COLUMN: WeekOfYear" = Table.AddColumn(#"COLUMN: YYYYMMDD", "WeekOfYear", each Date.WeekOfYear([Date])),
+    #"TYPE: Adjustments" = Table.TransformColumnTypes(#"COLUMN: WeekOfYear",{{"Date", type date}, {"DateInteger", Int64.Type}})
 in
-    #"COLUMN: IsInCurrentYear"
+    #"TYPE: Adjustments"
