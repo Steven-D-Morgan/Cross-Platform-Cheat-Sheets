@@ -1,0 +1,6 @@
+    #"FILTER: SmartSheet_Terminations" = Table.SelectRows(#"Renamed Columns2", each (List.Contains(SmartSheet_Terminations,[login_name])=false)),
+
+List.Contains(SmartSheet_Terminations,[login_name])=false
+
+
+= Table.SelectRows(#"Removed Duplicates", each (List.Contains(SiteList_Launched,[Node])=true))

@@ -1,0 +1,1 @@
+CwalkManager = LOOKUPVALUE(EmployeeList_PeoplePortal[CwalkMgr],EmployeeList_PeoplePortal[EmployeeUID_Amazon],cWalk_Corp[AMZ_ID])
