@@ -5,6 +5,10 @@
       Date = Calendar( Date(2020, 01, 01), Date(2025, 01, 01))
       ```
 
+- Different Start/End Dates
+= Date.StartOfMonth(List.Min(LaborData[DateWorked]))
+= Date.From(DateTime.LocalNow())
+= Date.From(List.Max(LaborData[DateWorked]))
 
 ```
 let
