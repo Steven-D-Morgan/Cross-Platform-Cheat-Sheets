@@ -34,10 +34,17 @@ RETURN
  
  
 
+
+
+
  TRIR_2022_v2 = CALCULATE(([RecordableIncidents_2022]) * 200000)/[TRIR_TotalHoursWorked]
 
 
- Sales R12M =
+
+
+
+
+Sales R12M =
 VAR NumOfMonths = 12
 VAR LastCurrentDate =
     MAX ( 'Date'[Date] )
@@ -75,3 +82,11 @@ VAR FirstDateInPeriod = MINX ( Period, Incidents[Incident Date] )
 VAR LastDateWithSales = MAX ( Incidents[Incident Date] )
 RETURN
     IF ( FirstDateInPeriod <= LastDateWithSales, Result )
+
+
+
+
+Total = SUMX(
+    FILTER(LaborData, 
+        CONTAINSSTRING(LaborData[Type], "Overtime")
+    ), [HoursWorked])
