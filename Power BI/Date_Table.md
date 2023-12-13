@@ -13,8 +13,8 @@
 ```
 let
     // Set the start and end date for the date table
-    StartDate = Date.StartOfMonth(List.Min(_AllAudits[Audit Date])),
-    EndDate = Date.EndOfMonth(List.Max(_AllAudits[Audit Date])),
+    StartDate = Date.StartOfMonth(List.Min(LaborData[DateWorked])),
+    EndDate =  Date.From(List.Max(LaborData[DateWorked])),
     // Create a list of dates from the start to end date
     DateList = List.Dates(StartDate, Duration.Days(EndDate - StartDate) + 1, #duration(1,0,0,0)),
 
@@ -39,7 +39,9 @@ let
     #"COLUMN: IsInCurrentYear" = Table.AddColumn(#"Changed Type1", "IsInCurrentYear", each Date.IsInCurrentYear([Date])),
     #"COLUMN: IsInCurrentMonth" = Table.AddColumn(#"COLUMN: IsInCurrentYear", "IsInCurrentMonth", each Date.IsInCurrentMonth([Date])),
     #"COLUMN: Month-Year" = Table.AddColumn(#"COLUMN: IsInCurrentMonth", "Month-Year", each Text.Combine({Date.ToText(Date.From([#"Year-Month"]), "MM"), "-", Date.ToText(Date.From([#"Year-Month"]), "yyyy")}), type text),
-    #"COLUMN: MonthNumber-MonthShort" = Table.AddColumn(#"COLUMN: Month-Year", "MonthNumber-MonthShort", each Text.Combine({"0", Text.From([Month], "en-US"), "-", [MonthNameShort]}), type text)
+    #"COLUMN: MonthNumber-MonthShort" = Table.AddColumn(#"COLUMN: Month-Year", "MonthNumber-MonthShort", each Text.Combine({"0", Text.From([Month], "en-US"), "-", [MonthNameShort]}), type text),
+    #"COLUMN: StartOfWeek_Sunday" = Table.AddColumn(#"COLUMN: MonthNumber-MonthShort", "StartofWeek_Sunday", each Date.StartOfWeek([DateTable])),
+    #"COLUMN: StartOfWeek_Monday" = Table.AddColumn(#"COLUMN: StartOfWeek_Sunday", "StartOfWeek_Monday", each Date.AddDays([StartofWeek_Sunday] ,1 ))
 in
-    #"COLUMN: MonthNumber-MonthShort"
+    #"COLUMN: StartOfWeek_Monday"
 ```
