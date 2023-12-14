@@ -12,6 +12,9 @@
     Incidents_NearMissCount = COUNTROWS(FILTER(Incidents, Incidents[Type] = "Near Miss"))
     ```
 
+
+Overtime_% = DIVIDE([Overtime_TotalHours], [WeeklyOT_TotalHours])
+
 TRIR_2022A = 
 DIVIDE(
     CALCULATE(
