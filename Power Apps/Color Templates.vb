@@ -19,6 +19,11 @@ If(Self.Text = "Yes", RGBA(232, 244, 217, 1),
 
 //////////////////////////////////////////////////////////////////////////////
 
+If(ThisItem.IsSelected, varGallerySelectedColor, varGalleryFillColor)
+If(ThisItem.IsSelected, Color.White, Color.Black)
+
+//////////////////////////////////////////////////////////////////////////////
+
 If(
     Value(lbl_HiddenWeatherTemperature.Text) <= 32,
     Color.DarkBlue,
