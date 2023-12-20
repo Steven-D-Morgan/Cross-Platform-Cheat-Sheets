@@ -10,20 +10,14 @@ If(Dropdown1.Selected.Value = "Inactive",Navigate(Screen3,ScreenTransition.Fade)
 If(varLocationsContainerHeight=225, Set(varLocationsContainerHeight, 30), Set(varLocationsContainerHeight, 225))
 If(Or(varFilterContainerVisible=true, varNewAuditContainerVisible=true),240, 0)
 If(Or(varFilterContainerVisible=true, varNewAuditContainerVisible=true),1126, 1366)
-1366
---------------------------------------------------------
-
-If(FormMode.New,
-   DisplayMode.Disabled, 
-   DisplayMode.Edit
-)
 
 --------------------------------------------------------
+If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+--------------------------------------------------------
+// Italics
+If(ThisItem.IsSelected, false, true)
+--------------------------------------------------------
 
-If(FormMode.New,
-   true,
-   false
-)
 --------------------------------------------------------
 If(FormMode.New,
    false,
