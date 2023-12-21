@@ -8,9 +8,10 @@ Welcome to your WTC Reference Experience!"
 If(Dropdown1.Selected.Value = "Inactive",Navigate(Screen3,ScreenTransition.Fade)))
 --------------------------------------------------------
 If(varLocationsContainerHeight=225, Set(varLocationsContainerHeight, 30), Set(varLocationsContainerHeight, 225))
+If(inp_Q01_Comments.Height=30, Set(varLocationsContainerHeight, 0), Set(varLocationsContainerHeight, 30))
 If(Or(varFilterContainerVisible=true, varNewAuditContainerVisible=true),240, 0)
 If(Or(varFilterContainerVisible=true, varNewAuditContainerVisible=true),1126, 1366)
-
+inp_Q01_Comments
 --------------------------------------------------------
 If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
 --------------------------------------------------------
