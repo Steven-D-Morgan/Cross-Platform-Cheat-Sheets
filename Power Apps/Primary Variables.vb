@@ -1,8 +1,3 @@
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-// Colors //////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
 Set(varCushmanRed, RGBA(228,0,43,1));
 Set(varCushmanDarkRed, RGBA(166,25,46,1));
 Set(varCushmanOrange, RGBA(255,103,31,1));
@@ -80,13 +75,20 @@ Set(varNewScreen_AnswerDD_Width, 100);
 Set(varNewScreen_AnswerDD_BorderColor, varDarkBronzeCoin);
 Set(varNewScreen_AnswerDD_BorderThickness, 1);
 Set(varNewScreen_AnswerDD_BorderStyle, BorderStyle.Solid);
+Set(varNewScreen_AnswerDD_X, 0);
 
-Set(varNewScreen_QuestionTextSize, 11);
-Set(varNewScreen_QuestionTextFont, Font.'Open Sans');
-Set(varNewScreen_QuestionTextFontWeight, FontWeight.Normal);
+Set(varNewScreen_Question_TextSize, 11);
+Set(varNewScreen_Question_TextFont, Font.'Open Sans');
+Set(varNewScreen_Question_TextFontWeight, FontWeight.Normal);
+Set(varNewScreen_Question_Height, 50);
+Set(varNewScreen_Question_Width, 913);
 
-Set(varNewScreen_NotesHoverFill, RGBA(RGBA(0, 255, 255, 0.5)));
-
+Set(varNewScreen_Notes_HoverFill, RGBA(0, 255, 255, 0.5));
+Set(varNewScreen_Notes_Height, 30);
+Set(varNewScreen_Notes_Width, 913);
+Set(varNewScreen_Notes_X, 100);
+Set(varNewScreen_Notes_Font, Font.'Open Sans');
+Set(varNewScreen_Notes_FontSize, 11);
 
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
