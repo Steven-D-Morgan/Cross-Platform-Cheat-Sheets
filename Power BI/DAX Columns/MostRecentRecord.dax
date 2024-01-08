@@ -1,0 +1,5 @@
+IsMostRecent = 
+var ThisEmployee = 'PeoplePortalRoster'[Name]
+var MostRecentDate = CALCULATE(MAX('PeoplePortalRoster'[SourceFileDate]),ALL('PeoplePortalRoster'),'PeoplePortalRoster'[Name] = ThisEmployee)
+return
+IF('PeoplePortalRoster'[SourceFileDate] = MostRecentDate,"Yes","No")
