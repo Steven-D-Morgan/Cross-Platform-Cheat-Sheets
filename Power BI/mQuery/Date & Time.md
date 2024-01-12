@@ -38,6 +38,9 @@
       ```
       Date.From(DateTime.LocalNow()) - [DateColumn]
       ```
+      ```
+      [Due Date] - Date.From(DateTime.LocalNow())
+      ```
 ***
 
 Date.AddDays([Due Date],-30)
