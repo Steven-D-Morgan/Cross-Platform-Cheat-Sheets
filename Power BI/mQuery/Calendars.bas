@@ -2,6 +2,8 @@ StartDate = List.Min(cWalk[Date_Created]),
 EndDate = Date.AddDays(Date.From(DateTime.LocalNow()),30)
 EndDate = Date.StartOfMonth(List.Max(Incidents[Incident Date])),
 EndDate = List.Max(cWalk[Date_Created]),
+EndDate = Date.EndOfMonth(List.Max(_AllAudits[Audit Date]))
+EndDate = Date.From(DateTime.LocalNow())
 
 
  let
