@@ -40,5 +40,6 @@
       ```
 ***
 
-
+Date.AddDays([Due Date],-30)
+= Table.AddColumn(#"Column: Manager", "30 Days from Due", each Date.AddDays([Due Date],-30))
 ***
