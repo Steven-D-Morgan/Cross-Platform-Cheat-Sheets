@@ -1,0 +1,5 @@
+RMM_DAX = 
+    SWITCH(TRUE()
+    ,cWalk_Corp[Job_DAX] = "Reliability Program Mgr - CWS", "Daniel Hubbard"
+    , cWalk_Corp[Job_DAX] = "Control System Engineer - CWS", "Ryan Witchey"
+    ,LOOKUPVALUE(SiteList[RegionalLeader],SiteList[SITE],cWalk_Corp[Location]))
