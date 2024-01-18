@@ -7,4 +7,11 @@ Distinct(Filter('SP List',choiceColumn.Value="desiredChoice"),'personColumn'.Dis
 
 If(Office365Users.MyProfile().GivenName = "Gregory", "Welcome, " & "Scott", "Welcome, " & Office365Users.MyProfile().GivenName)
 
-Office365Users.SearchUser({searchTerm:varMicrosoftUser.DisplayName})
+
+
+
+
+
+DEFAULT_SELECTED_ITEMS -----> Office365Users.SearchUser({searchTerm:varFLS_ThisItem.AuditorName,top:1})
+
+ITEMS -----> Office365Users.SearchUser({searchTerm:cb_Auditor_14.SearchText,top:5})

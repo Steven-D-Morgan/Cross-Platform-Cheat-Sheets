@@ -27,7 +27,7 @@ Set(varCurrentUser, Office365Users.MyProfile());
 ////////////////////////////////////////////////////////////////////////////
 // Gallerys ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
-Set(varGalleryTemplateSize, 55);
+Set(varGalleryTemplateSize, 66);
 Set(varGalleryFillColor, RGBA(87,87,87,0.75));
 Set(varGallerySelectedColor, RGBA(238,173,14,1)); // Gold
 Set(varGalleryBorderThickness, 2);
@@ -54,18 +54,7 @@ Set(varBrowseScreen_NoteLabelWidth, 945);
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
-// Edit Screen /////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-Set(varEditScreen_LeftContainerTextColor, RGBA(0,0,0,0));
-Set(varEditScreen_RightContainerTextColor, Color.Black);
-Set(varEditScreen_AnswerDD_Width, 100);
-Set(varEditScreen_AnswerDD_Height, 50);
-Set(varEditScreen_AnswerDD_X, 0);
-
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-// New Screen //////////////////////////////////////////////////////////////
+// Edit/New Screen //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
 Set(varNewScreen_LeftContainerTextColor, RGBA(0,0,0,0));
 Set(varNewScreen_RightContainerTextColor, Color.Black);
@@ -75,7 +64,10 @@ Set(varNewScreen_AnswerDD_Width, 100);
 Set(varNewScreen_AnswerDD_BorderColor, varDarkBronzeCoin);
 Set(varNewScreen_AnswerDD_BorderThickness, 1);
 Set(varNewScreen_AnswerDD_BorderStyle, BorderStyle.Solid);
+Set(varEditNewScreen_AnswerDD_FontWeight, FontWeight.Bold);
 Set(varNewScreen_AnswerDD_X, 0);
+Set(varNewScreen_AnswerDD_HoverFill, RGBA(0, 255, 255, 0.5));
+// RGBA(186, 202, 226, 1)
 
 Set(varNewScreen_Question_TextSize, 11);
 Set(varNewScreen_Question_TextFont, Font.'Open Sans');
@@ -89,6 +81,9 @@ Set(varNewScreen_Notes_Width, 913);
 Set(varNewScreen_Notes_X, 100);
 Set(varNewScreen_Notes_Font, Font.'Open Sans');
 Set(varNewScreen_Notes_FontSize, 11);
+Set(varNewScreen_Notes_FontWeight, FontWeight.Normal);
+
+Set(varEditScreen_DeleteIcon_Color, RGBA(255, 0, 0, 1));
 
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
@@ -112,33 +107,33 @@ Set(varDropDownBorderColor, varBorderColor);
 ////////////////////////////////////////////////////////////////////////////
 // Default Gallery Selections //////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
-Set(varLOTO_GalleryFirstItem,First(LOTO_Gallery_1.AllItems));
+Set(varLOTO_GalleryFirstItem,First(LockOutTagOut_Gallery.AllItems));
 Set(varLOTO_ThisItem, varLOTO_GalleryFirstItem);
 
-Set(varARFH_GalleryFirstItem,First(ARFH_Gallery.AllItems));
+Set(varARFH_GalleryFirstItem,First(RoboticsFloorHazards_Gallery.AllItems));
 Set(varARFH_ThisItem, varARFH_GalleryFirstItem);
 
-Set(varHK_GalleryFirstItem,First(HK_Gallery.AllItems));
+Set(varHK_GalleryFirstItem,First(Housekeeping_Gallery.AllItems));
 Set(varHK_ThisItem, varHK_GalleryFirstItem);
 
-Set(varHS_GalleryFirstItem,First(HS_Gallery.AllItems));
+Set(varHS_GalleryFirstItem,First(HandSafety_Gallery.AllItems));
 Set(varHS_ThisItem, varHS_GalleryFirstItem);
 
-Set(varFLS_GalleryFirstItem,First(FLS_Gallery.AllItems));
+Set(varFLS_GalleryFirstItem,First(FireLifeSafety_Gallery.AllItems));
 Set(varFLS_ThisItem, varFLS_GalleryFirstItem);
 
-Set(varTS_GalleryFirstItem,First(TS_Gallery.AllItems));
+Set(varTS_GalleryFirstItem,First(ToolSafety_Gallery.AllItems));
 Set(varTS_ThisItem, varTS_GalleryFirstItem);
 
-Set(varAL_GalleryFirstItem,First(AL_Gallery.AllItems));
+Set(varAL_GalleryFirstItem,First(AerialLift_Gallery.AllItems));
 Set(varAL_ThisItem, varAL_GalleryFirstItem);
 
-Set(varCM_GalleryFirstItem,First(CM_Gallery.AllItems));
+Set(varCM_GalleryFirstItem,First(ChemicalManagement_Gallery.AllItems));
 Set(varCM_ThisItem, varCM_GalleryFirstItem);
 
-Set(varMG_GalleryFirstItem,First(MG_Gallery.AllItems));
+Set(varMG_GalleryFirstItem,First(MachineGuarding_Gallery.AllItems));
 Set(varMG_ThisItem, varMG_GalleryFirstItem);
 
-Set(varLI_GalleryFirstItem,First(LI_Gallery.AllItems));
+Set(varLI_GalleryFirstItem,First(LadderInspection_Gallery.AllItems));
 Set(varLI_ThisItem, varLI_GalleryFirstItem);
 
