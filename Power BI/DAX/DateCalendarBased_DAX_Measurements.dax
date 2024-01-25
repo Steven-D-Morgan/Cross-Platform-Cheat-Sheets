@@ -1,0 +1,9 @@
+OT_Goal = 
+ SWITCH(TRUE()
+     , 'Calendar'[Quarter] = 2 && 'Calendar'[Year] = 2023, 0.0567
+     , 'Calendar'[Quarter] = 3 && 'Calendar'[Year] = 2023, 0.05
+     , 'Calendar'[Quarter] = 4 && 'Calendar'[Year] = 2023, 0.07
+     , 'Calendar'[Quarter] = 1 && 'Calendar'[Year] = 2024, 0.05
+    ,Month([Date]) >= 10, .05
+    ,.03
+ )
