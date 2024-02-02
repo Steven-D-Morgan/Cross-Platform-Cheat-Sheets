@@ -13,11 +13,8 @@ Under15Calc = DIVIDE([Under15],[Under15TOTAL])
 ```
 
 ```
-Under15TOTAL:
-Under15TOTAL = 
-CALCULATE(
-    COUNTA('Incident Statistics'[CWUnder15Check]),FILTER('Incident Statistics','Incident Statistics'[CWUnder15Metric]= "Yes" || 'Incident Statistics'[CWUnder15Metric]= "No")
- )
+wodtls_InitialPass = 
+CALCULATE(COUNTROWS('s_dv_bert_wo_dtls'),FILTER('s_dv_bert_wo_dtls','s_dv_bert_wo_dtls'[wo_status]="pass"))
 ```
 
 ```
