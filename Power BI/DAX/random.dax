@@ -1,1 +1,3 @@
 LaunchDate = LOOKUPVALUE('Site List'[LAUNCH],'Site List'[SITE],PeopleSoft[building])
+
+Mgr_alias = LOOKUPVALUE(PeopleSoft[Mgr_Email], PeopleSoft[login_name],EmailTable[Login Name])

@@ -20,3 +20,8 @@ OT_Goal =
     ,Month([Date]) >= 10, .05
     ,.03
  )
+
+
+
+
+ Today = [Today]
