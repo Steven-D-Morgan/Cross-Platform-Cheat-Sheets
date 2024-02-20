@@ -1,3 +1,23 @@
 LaunchDate = LOOKUPVALUE('Site List'[LAUNCH],'Site List'[SITE],PeopleSoft[building])
 
 Mgr_alias = LOOKUPVALUE(PeopleSoft[Mgr_Email], PeopleSoft[login_name],EmailTable[Login Name])
+
+
+CWS_RMM = 
+VAR
+amz_alias = [Login Name]
+Var
+mgr_wkdid = LOOKUPVALUE(cr71c_roster_full[wd_manager_employee ID],cr71c_roster_full[pp_login_name],amz_alias)
+Var
+RMM = if(LOOKUPVALUE(cr71c_roster_full[wd_manager_title],cr71c_roster_full[pp_login_name],amz_alias) = "RMM"
+        ,LOOKUPVALUE(cr71c_roster_full[wd_manager_name],cr71c_roster_full[pp_login_name],amz_alias)
+        ,LOOKUPVALUE(cr71c_roster_full[wd_manager_name],cr71c_roster_full[wd_id],mgr_wkdid)
+        )
+ Return
+
+    Switch( true()
+    ,ISNUMBER(COUNTX(FILTER('Site List', 'Site List'[Regional Leader Alias] = amz_alias), 'Site List'[SITE])) , LOOKUPVALUE(cr71c_roster_full[wd_preferred_name],cr71c_roster_full[pp_login_name],amz_alias)
+    ,ISNUMBER(COUNTX(FILTER('Site List', 'Site List'[SITE] = [Building]), 'Site List'[SITE])), LOOKUPVALUE('Site List'[REGIONAL LEADER],'Site List'[SITE],[Building], "Central")
+    ,ISNUMBER(COUNTX(FILTER('Site List', 'Site List'[POC Alias] = amz_alias), 'Site List'[SITE])), RMM
+    , "Central"
+    )
