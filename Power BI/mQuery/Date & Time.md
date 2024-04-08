@@ -1,3 +1,7 @@
+### Calculate Months between two dates
+
+Number.Round(Number.From((Date.From(DateTime.LocalNow()) - [Service Start Date])/( 365.25 / 12 )) ,0 )
+
 ### Subtract X Day(s)/Month(s)/Year(s) from a Date or Date/Time Column
  - Below are exaples on how to subtract Days, Months or Years
     - X **Days** from a column date.

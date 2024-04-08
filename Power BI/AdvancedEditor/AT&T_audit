@@ -1,0 +1,22 @@
+let
+    Source = SharePoint.Files("https://caliberservicemgmt-my.sharepoint.com/personal/nneeser_caliberservicemgmt_com/", [ApiVersion = 15]),
+    #"FILTER: File Path" = Table.SelectRows(Source, each Text.Contains([Folder Path], "/01 Pricing Book/") or Text.Contains([Folder Path], "Landscape Pricing Book")),
+    #"FILTER: <> _RETIRED" = Table.SelectRows(#"FILTER: File Path", each not Text.Contains([Folder Path], "/_RETIRED/")),
+    #"FILTER: File Name" = Table.SelectRows(#"FILTER: <> _RETIRED", each ([Name] = "Alabama Pricing Book.xlsx" or [Name] = "Carolina Pricing Book.xlsx" or [Name] = "Florida Pricing Book.xlsx" or [Name] = "Georgia Pricing Book.xlsx" or [Name] = "Iowa Pricing Book.xlsx" or [Name] = "Kentucky - Landscape Pricing Book.xlsx" or [Name] = "Landscape Pricing Book - Kentucky.xlsx" or [Name] = "Landscape Pricing Book - Tennessee.xlsx" or [Name] = "Oklahoma Land Pricing Book.xlsx" or [Name] = "Pricing Book - Tennesee Landscape.xlsx" or [Name] = "Texas Pricing Book.xlsx")),
+    #"Filtered Hidden Files1" = Table.SelectRows(#"FILTER: File Name", each [Attributes]?[Hidden]? <> true),
+    #"Invoke Custom Function1" = Table.AddColumn(#"Filtered Hidden Files1", "Transform File", each #"Transform File"([Content])),
+    #"Renamed Columns1" = Table.RenameColumns(#"Invoke Custom Function1", {"Name", "Source.Name"}),
+    #"Removed Other Columns1" = Table.SelectColumns(#"Renamed Columns1", {"Source.Name", "Transform File"}),
+    #"Expanded Table Column1" = Table.ExpandTableColumn(#"Removed Other Columns1", "Transform File", Table.ColumnNames(#"Transform File"(#"Sample File"))),
+    #"Renamed Columns" = Table.RenameColumns(#"Expanded Table Column1",{{"Source.Name", "SourceFile"}, {"Type", "Site Type"}}),
+    #"APPEND: CPB_DCO" = Table.Combine({#"Renamed Columns", CPB_DCO}),
+    #"COLUMN: SeasonDuration" = Table.AddColumn(#"APPEND: CPB_DCO", "SeasonDuration", each if [State] = "AL" then 12 else if [State] = "FL" then 12 else if [State] = "GA" then 12 else if [State] = "IA" then 7 else if [State] = "KY" then 7 else if [State] = "NC" then 12 else if [State] = "OK" then 12 else if [State] = "SC" then 12 else if [State] = "TN" then 8 else if [State] = "TX" then 12 else null),
+    #"Removed Columns" = Table.RemoveColumns(#"COLUMN: SeasonDuration",{"Date Requested", "Requested By", "Date Approved by JLL #(lf)(Go Live)", "OM/TM Name", "Change Description", "Proposed Service Frequency", "Proposed Per Mow Rate", "Mow,Edge (Main Mow)", "Mow Level 2 (See Map)", "Mow Level 3 (See Map)", "Brush Hog", "Weed Control", "Pruning", "Spray Gravel Yard", "Fert/Weed Control", "Fence Line Clearing", "Irrigation Inspection/Testing", "Fall Clean-Up", "Spring Clean-Up", "Mow,Edge (Main Mow)2", "Mow Level 2 (See Map)3", "Mow Level 3 (See Map)4", "Brush Hog5", "Weed Control6", "Pruning7", "Spray Gravel Yard8", "Fert/Weed Control9", "Fence Line Clearing10", "Irrigation Inspection/Testing11", "Fall Clean-Up12", "Spring Clean-Up13", "Mow,Edge (Main Mow)14", "Mow Level 2 (See Map)15", "Mow Level 3 (See Map)16", "Brush Hog17", "Weed Control18", "Pruning19", "Spray Gravel Yard20", "Fert/Weed Control21", "Fence Line Clearing22", "Irrigation Inspection/Testing23", "Fall Clean-Up24", "Spring Clean-Up25", "Proposed Monthly Rate", "Proposed Ongoing Pruning Rate", "Proposed Total Seasonal Cost", "Original GLC", "Original Address"}),
+    #"Changed Type" = Table.TransformColumnTypes(#"Removed Columns",{{"Service End Date", type date}, {"Service Start Date", type date}, {"Active Total Seasonal Cost", Currency.Type}, {"Active Ongoing Prune Rate", Currency.Type}, {"Active Per Mow", Currency.Type}, {"Active Mows Per Year", Int64.Type}, {"Status", type text}, {"GLC", type text}, {"Street", type text}, {"City", type text}, {"Active Monthly Rate", Currency.Type}, {"SeasonDuration", Int64.Type}}),
+    #"ERRORS: Ongoing Prune Rate" = Table.ReplaceErrorValues(#"Changed Type", {{"Active Ongoing Prune Rate", 0.01}}),
+    #"ERRORS: Active Monthly Rate" = Table.ReplaceErrorValues(#"ERRORS: Ongoing Prune Rate", {{"Active Monthly Rate", 0}}),
+    #"Uppercased Text" = Table.TransformColumns(#"ERRORS: Active Monthly Rate",{{"Status", Text.Upper, type text}}),
+    #"Added Custom" = Table.AddColumn(#"Uppercased Text", "Months In Service", each Number.Round(Number.From((Date.From(DateTime.LocalNow()) - [Service Start Date])/( 365.25 / 12 )) ,0 )),
+    #"Added Conditional Column" = Table.AddColumn(#"Added Custom", "Custom", each if [Status] = "" then "" else null)
+in
+    #"Added Conditional Column"
