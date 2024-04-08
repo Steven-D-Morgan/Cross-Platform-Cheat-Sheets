@@ -2,6 +2,11 @@
 
 Number.Round(Number.From((Date.From(DateTime.LocalNow()) - [Service Start Date])/( 365.25 / 12 )) ,0 )
 
+= Table.AddColumn(#"Added Custom", "Custom", each 
+if [Service End Date] = null then Number.Round(Number.From((Date.From(DateTime.LocalNow()) - [Service Start Date])/( 365.25 / 12 )) ,0 )
+else if [Service End Date] <> null then Number.Round(Number.From([Service End Date] - [Service Start Date])/( 365.25 / 12 ) ,0 )
+else null)
+
 ### Subtract X Day(s)/Month(s)/Year(s) from a Date or Date/Time Column
  - Below are exaples on how to subtract Days, Months or Years
     - X **Days** from a column date.
