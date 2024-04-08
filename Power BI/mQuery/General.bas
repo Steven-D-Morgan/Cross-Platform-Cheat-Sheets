@@ -9,3 +9,6 @@ REMOVE DUPLICATES BUT KEEP MOST RECENT DATA
 Table.Buffer() forces PowerQuery to load the list after sorting.  That means the following steps (like Remove Duplicates) work off the entire sorted list and give the correct results.
 
 All Microsoft says about Table.Buffer is “Buffers a table in memory, isolating it from external changes during evaluation.” which doesn’t even begin to explain it’s vital importance in some situations and the performance gains possible elsewhere.
+---
+Make 1 --> 01 without 10 looking like 010
+Text.PadStart(Text.From([#"Month: M"], "en-US"), 2, "0")
