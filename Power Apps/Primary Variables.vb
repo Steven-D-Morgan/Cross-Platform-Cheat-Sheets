@@ -7,6 +7,10 @@ Set(varCushmanDarkBlue, RGBA(0,56,101,1));
 Set(varCushmanBlue, RGBA(0,147,178,1));
 Set(varCushmanLightBlue, RGBA(155,211,221,1));
 Set(varCushmanLime, RGBA(181,189,0,1));
+
+Set(varAT&T_Blue, RGBA((6,122,180,1)); 
+Set(varAT&T_Orange, RGBA(255,114,0,1)); 
+
 Set(varDarkRoyalBlue, RGBA(2,25,69,1));
 Set(varDarkBronzeCoin, RGBA(69,46,2,1)); 
 
