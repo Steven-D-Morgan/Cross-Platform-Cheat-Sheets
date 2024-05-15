@@ -11,6 +11,9 @@
 = Date.From(List.Max(LaborData[DateWorked]))
 = Date.StartOfMonth(List.Min(Corrigo_WorkOrderDates[Created]))
 = List.Max(Corrigo_WorkOrderDates[SourceFileDate])
+= Date.FromText("2019-1-1")
+
+
 ```
 let
     // Set the start and end date for the date table
