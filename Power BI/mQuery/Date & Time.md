@@ -51,7 +51,7 @@ else null)
       [Due Date] - Date.From(DateTime.LocalNow())
       ```
       ```
-      ((Date.Year([Date.From(DateTime.LocalNow())])-Date.Year([Service Start Date]))*12) + Date.Month([Date.From(DateTime.LocalNow())]) - Date.Month([Service Start Date])
+      ((Date.Year(Date.From(DateTime.LocalNow()))-Date.Year([Service Start Date]))*12) + Date.Month(Date.From(DateTime.LocalNow())) - Date.Month([Service Start Date])
       ```
 ***
 
