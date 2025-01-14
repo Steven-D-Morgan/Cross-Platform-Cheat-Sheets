@@ -17,8 +17,8 @@
 ```
 let
     // Set the start and end date for the date table
-    StartDate = Date.StartOfMonth(List.Min(LaborData[DateWorked])),
-    EndDate =  Date.From(List.Max(LaborData[DateWorked])),
+    StartDate = Date.FromText("2023-1-1"),
+    EndDate =  Date.From(DateTime.LocalNow()),
     // Create a list of dates from the start to end date
     DateList = List.Dates(StartDate, Duration.Days(EndDate - StartDate) + 1, #duration(1,0,0,0)),
 
@@ -45,7 +45,9 @@ let
     #"COLUMN: Month-Year" = Table.AddColumn(#"COLUMN: IsInCurrentMonth", "Month-Year", each Text.Combine({Date.ToText(Date.From([#"Year-Month"]), "MM"), "-", Date.ToText(Date.From([#"Year-Month"]), "yyyy")}), type text),
     #"COLUMN: MonthNumber-MonthShort" = Table.AddColumn(#"COLUMN: Month-Year", "MonthNumber-MonthShort", each Text.Combine({"0", Text.From([Month], "en-US"), "-", [MonthNameShort]}), type text),
     #"COLUMN: StartOfWeek_Sunday" = Table.AddColumn(#"COLUMN: MonthNumber-MonthShort", "StartofWeek_Sunday", each Date.StartOfWeek([DateTable])),
-    #"COLUMN: StartOfWeek_Monday" = Table.AddColumn(#"COLUMN: StartOfWeek_Sunday", "StartOfWeek_Monday", each Date.AddDays([StartofWeek_Sunday] ,1 ))
+    #"COLUMN: StartOfWeek_Monday" = Table.AddColumn(#"COLUMN: StartOfWeek_Sunday", "StartOfWeek_Monday", each Date.AddDays([StartofWeek_Sunday] ,1 )),
+    #"Sorted Rows" = Table.Sort(#"COLUMN: StartOfWeek_Monday",{{"Month-Year", Order.Ascending}}),
+    #"COLUMN: MMM YYYY" = Table.AddColumn(#"Sorted Rows", "MMM YYYY", each Text.Combine({Date.ToText(Date.From([#"Month-Year"]), "MMM"), " ", Date.ToText(Date.From([#"Month-Year"]), "yyyy")}), type text)
 in
-    #"COLUMN: StartOfWeek_Monday"
+    #"COLUMN: MMM YYYY"
 ```
