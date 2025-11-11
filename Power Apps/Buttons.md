@@ -22,12 +22,12 @@ Patch(
         Status: {Value: Status_Input.Selected.Value},
         SpecificIssues: {Value:SpecificIssueInput.Selected.Value},
 
-        //C&W Technician
+        //Technician
         Tech_Dispatch_Name: TechName_Input.Text,
         Tech_Dispatch_Time: TechTime_Input.Text,
         Tech_Dispatch_Date: EventDate_Input.SelectedDate,
 
-        //C&W Management
+        // Management
         CW01_Manager: {Value: CW01_Input.Selected.Value},
         CW02_Manager: {Value: CW02_Input.Selected.Value},
         CW03_Manager: {Value: CW03_Input.Selected.Value},
@@ -38,7 +38,7 @@ Patch(
         CW02_Time: CW02Time_Input.Text,
         CW03_Time: CW03Time_Input.Text,
 
-        //VG Management
+        //Management
         VG01_Manager: {Value: VG01_Input.Selected.Value},
         VG02_Manager: {Value: VG02_Input.Selected.Value},
         VG03_Manager: {Value: VG03_Input.Selected.Value},
